@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="{% static 'landingpage/assets/img/favicon.png' %}" />
+    <title>RaraNews</title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="{% static 'landingpage/assets/css/nucleo-icons.css" rel="stylesheet' %}" />
+    <link href="{% static 'landingpage/assets/css/nucleo-svg.css" rel="stylesheet' %}" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{% static 'landingpage/assets/css/material-kit-pro.css' %}?v=3.0.0" rel="stylesheet" />
+  </head>
+
+  <body class="blog-posts bg-gray-200">
+    <!-- Navbar Transparent -->
+    {% include 'landingpage/navbar.html' %}
+    <!-- End Navbar -->
+    <!-- End Navbar -->
+    <!-- -------- START HEADER 11 w/ carousel ------- -->
+    <header>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="background-image: url('/media/artikel/totoro.jpg'); background-size: cover; background-position: center">
+        <div class="carousel-inner">
+          <!-- Film/Animasi Slide -->
+          <div class="carousel-item active" style="background-image: url('/media/artikel/totoro.jpg'); background-size: cover; background-position: center">
+            <div class="page-header min-vh-75" loading="lazy">
+              <span class="mask bg-gradient-dark"></span>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 my-auto">
+                    <h4 class="text-white mb-0 fadeIn1 fadeInBottom">film/animasi</h4>
+                    <h1 class="text-white fadeIn2 fadeInBottom">Ramai Tren Foto AI ala Studio Ghibli, Komentar Hayao Miyazaki Kembali Disorot</h1>
+                    <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">
+                      Beberapa waktu belakangan, aneka gambar dengan gaya khas animasi Studio Ghibli, mendadak mewarnai media sosial. Banyak netizen mengunggah foto dirinya yang disunting ala goresan tangan animator dan warna mirip My
+                      Neighbor Totoro atau Spirited Away milik Studio Ghibli.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Games Slide -->
+          <div class="carousel-item" style="background-image: url('/media/artikel/gag.jpg'); background-size: cover; background-position: center">
+            <div class="page-header min-vh-75" loading="lazy">
+              <span class="mask bg-gradient-dark"></span>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 my-auto">
+                    <h4 class="text-white mb-0 fadeIn1 fadeInBottom">games</h4>
+                    <h1 class="text-white fadeIn2 fadeInBottom">Garden Tower Defense Tier List, Ini Tanaman Terbaiknya</h1>
+                    <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">
+                      Garden Tower Defense adalah game Roblox buatan Garden Defenders yang mengajak pemain menanam dan memanggil tanaman untuk melawan musuh. Setiap tanaman berperan sebagai menara dengan kemampuan, jangkauan, dan serangan
+                      yang berbeda-beda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Kecantikan Slide -->
+          <div class="carousel-item" style="background-image: url('/media/artikel/haircare.jpg'); background-size: cover; background-position: center">
+            <div class="page-header min-vh-75" style="background-image: url('../../assets/img/dg3.jpg')" loading="lazy">
+              <span class="mask bg-gradient-dark"></span>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 my-auto">
+                    <h4 class="text-white mb-0 fadeIn1 fadeInBottom">kecantikan</h4>
+                    <h1 class="text-white fadeIn2 fadeInBottom">Rekomendasi Produk Perawatan Rambut untuk Rambut Rontok</h1>
+                    <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">
+                      Rambut rontok merupakan masalah yang dialami banyak orang terlepas dari usia dan jenis kelamin. Penyebabnya pun beragam, mulai dari genetik, hormon, dan penuaan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="min-vh-75 position-absolute w-100 top-0">
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon position-absolute bottom-50" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon position-absolute bottom-50" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- -------- END HEADER 11 w/ carousel ------- -->
+
+    {% block content %} {% endblock content %}
+
+    <!--   Core JS Files   -->
+    <script src="{% static 'landingpage/assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'landingpage/assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'landingpage/assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/mattboldt/typed.js/ -->
+    <script src="{% static 'landingpage/assets/js/plugins/typedjs.js' %}"></script>
+    <script src="{% static 'landingpage/assets/js/plugins/choices.min.js' %}"></script>
+    <script src="{% static 'landingpage/assets/js/plugins/flatpickr.min.js' %}"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="{% static 'landingpage/assets/js/plugins/parallax.min.js' %}"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="{% static 'landingpage/assets/js/plugins/nouislider.min.js' %}" type="text/javascript' %}"></script>
+    <!--  Plugin for the blob animation -->
+    <script src="{% static 'landingpage/assets/js/plugins/anime.min.js' %}" type="text/javascript"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="{% static 'landingpage/assets/js/material-kit-pro.min.js' %}?v=3.0.0" type="text/javascript"></script>
+    <script>
+      if (document.getElementById("language-select")) {
+        var element = document.getElementById("language-select");
+        const example = new Choices(element, {
+          searchEnabled: false,
+        });
+      }
+      if (document.getElementById("currency-select")) {
+        var element = document.getElementById("currency-select");
+        const example = new Choices(element, {
+          searchEnabled: false,
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -37,9 +37,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1j5vh%bdc-0i4(bs*w8-@7^5g+=e)6+_v=q7@i3^oz@owg_20h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['raranews.com', 'www.raranews.com', '127.0.0.1', 'localhost',]
+
+CSRF_TRUSTED_ORIGINS = ['https://raranews.com']
 
 
 # Application definition

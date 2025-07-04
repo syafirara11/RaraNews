@@ -1,1 +1,1 @@
-web: python manage.py collectstatic --noinput && gunicorn mysite.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn rara_news.wsgi:application --bind 0.0.0.0:$PORT

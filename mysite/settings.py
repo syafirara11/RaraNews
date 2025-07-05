@@ -37,17 +37,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1j5vh%bdc-0i4(bs*w8-@7^5g+=e)6+_v=q7@i3^oz@owg_20h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    'raranews-production.up.railway.app',
-    'localhost',
-    '127.0.0.1'
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://raranews-production.up.railway.app'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -64,12 +56,11 @@ INSTALLED_APPS = [
 
     'artikel',
     'galeri',
-   
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,7 +74,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,15 +101,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'artikel_blok',
-        'USER': 'root',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'syfirara$default',
+        'USER': 'syfirara',
         'PASSWORD': '',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'HOST': 'syfirara.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
-
 
 
 # Password validation
@@ -172,6 +162,8 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 
 # Media files
@@ -183,7 +175,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 customColorPalette = [
     {
